@@ -1,0 +1,74 @@
+Description du modèle de constellation BI — Analyse de l’attrition et de la performance des employés
+🎯 Objectif général du modèle
+
+Le modèle de données vise à analyser et prédire :
+
+les facteurs qui influencent le départ (attrition) des employés,
+
+et les facteurs qui impactent la performance au sein de l’entreprise.
+
+Ce modèle permet aux responsables RH de suivre, visualiser et anticiper les tendances liées à la satisfaction, à la fidélisation et à la productivité des employés.
+
+
+🗂️ 1. Tables de dimensions
+🔹 Dim_Employé:Employee_ID,Age,Gender,Marital_Status,Education_Level,Years_at_Company,Distance_from_Home,Remote_Work (Oui / Non),Company_Tenure,Company_Size.
+
+🔹 Dim_JOB:Décrit le poste occupé par chaque employé.
+Elle est liée à Dim_Département et à Dim_Employé (hiérarchie logique : Département → Job → Employé).
+
+Attributs :Job_ID,job_Role (Finance, IT, Éducation, Médical, etc.),Job_Level (Entry, Mid, Senior),Leadership_Opportunities (Oui / Non),Innovation_Opportunities (Oui / Non)
+Permet d’étudier les tendances d’attrition et de performance selon les rôles et niveaux de poste.
+
+🔹 Dim_Département
+
+Regroupe les différents départements ou secteurs d’activité.
+Attributs :Departement_ID,Department_Name (Finance, Technology, Healthcare, etc.),Manager_Name
+->Permet d’analyser la répartition des départs et de la performance par département.
+
+🔹 Dim_Temps
+Dimension partagée entre les deux tables de faits.
+Attributs :Date_ID,Année,Mois,Trimestre
+->Permet de suivre l’évolution de la performance et du taux d’attrition dans le temps.
+
+📊 2. Tables de faits
+🔸 Fait_Attrition
+
+Regroupe les indicateurs liés au départ ou au maintien des employés dans l’entreprise.
+Attributs :Employee_ID (clé étrangère vers Dim_Employé),Job_ID (clé étrangère vers Dim_Job),Date_ID (clé étrangère vers Dim_Temps),Attrition (0 = reste, 1 = quitte),Work_Life_Balance,Job_Satisfaction,Company_Reputation,Employee_Recognition
+
+Exemples de KPI associés :
+Taux d’attrition par département
+Taux d’attrition par niveau de poste
+Corrélation entre satisfaction et départ
+
+🔸 Fait_Performance
+
+Contient les mesures liées à la performance globale et individuelle.
+Attributs :Employee_ID,Job_ID,Date_ID,Performance_Rating,Monthly_Income,Number_of_Promotions,Years_in_Current_Role
+
+Exemples de KPI associés :
+Score moyen de performance par département
+Revenu moyen selon le niveau de poste
+Relation entre promotion et performance
+
+🔁 Relations entre les tables
+
+Dim_Employé est reliée à Fait_Attrition et Fait_Performance.
+
+Dim_Temps est commune aux deux faits pour les analyses temporelles.
+
+Dim_Job et Dim_Département suivent une hiérarchie logique :
+Département → Job → Employé.
+
+
+💡 Valeur ajoutée du modèle
+
+Offre une vision multidimensionnelle des ressources humaines.
+
+Permet d’identifier les facteurs clés de départ des employés.
+
+Aide à mettre en place des politiques de rétention du personnel.
+
+Sert de base pour la création de rapports Power BI dynamiques.
+
+Facile à alimenter via SSIS à partir de données RH existantes.
