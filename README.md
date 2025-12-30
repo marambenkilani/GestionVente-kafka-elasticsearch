@@ -73,8 +73,7 @@
 
 
 #  Auteur
-Maram Benkilani , Projet académique – Big Data & Business Intelligence
-
+Maram Benkilani 
 
 #  Mots-clés
  Big Data, Kafka, ELK Stack, Docker, E-commerce, Data Pipeline, Data Analytics
