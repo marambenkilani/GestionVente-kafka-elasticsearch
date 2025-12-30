@@ -73,7 +73,7 @@
 
 
 #  Auteur
-Maram Benkilani Projet académique – Big Data & Business Intelligence
+Maram Benkilani , Projet académique – Big Data & Business Intelligence
 
 
 #  Mots-clés
