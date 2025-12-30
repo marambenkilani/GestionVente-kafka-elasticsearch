@@ -72,10 +72,9 @@
  Les données sont visualisées dans Kibana à travers des tableaux de bord interactifs pour l’aide à la décision.
 
 
-# 👩‍💻 Auteur
-# Maram Benkilani
-# Projet académique – Big Data & Business Intelligence
+#  Auteur
+Maram Benkilani Projet académique – Big Data & Business Intelligence
 
-# ------------------------------------------------------
-# 📌 Mots-clés
+
+#  Mots-clés
  Big Data, Kafka, ELK Stack, Docker, E-commerce, Data Pipeline, Data Analytics
