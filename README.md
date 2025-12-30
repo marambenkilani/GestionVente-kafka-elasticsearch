@@ -1,13 +1,10 @@
 
-# ======================================================
 # 📊 Big Data Pipeline – Analyse des Ventes E-commerce
-# ======================================================
-
 # 🧠 Description du projet
  Ce projet met en place un pipeline Big Data scalable pour analyser les ventes e-commerce.
  Les données sont ingérées depuis des fichiers CSV, traitées en temps réel et visualisées via des dashboards.
 
-# ------------------------------------------------------
+
 #  Objectifs
  - Gérer de grands volumes de données de ventes
  - Traiter les données en temps réel
@@ -15,11 +12,11 @@
  - Stocker efficacement les données
  - Fournir des tableaux de bord décisionnels
 
-# ------------------------------------------------------
+
 #  Architecture du projet
  CSV → Python → Kafka → Logstash → Elasticsearch → Kibana
 
-# ------------------------------------------------------
+
 #  Technologies utilisées
  - Python : ingestion, nettoyage et transformation
  - Apache Kafka : streaming des données
@@ -28,7 +25,7 @@
  - Kibana : visualisation et dashboards
  - Docker & Docker Compose : orchestration des services
 
-# ------------------------------------------------------
+
 #  Structure du projet
 
  bigdataproject/
@@ -41,7 +38,7 @@
  ├── docker-compose.yml
  └── README.md
 
-# ------------------------------------------------------
+
 #  Démarrage rapide
 
  1️⃣ Lancer tous les services :
@@ -55,7 +52,7 @@
  - Kibana  : http://localhost:5601
  - Elasticsearch : http://localhost:9200
 
-# ------------------------------------------------------
+
 #  KPI analysés
  - Chiffre d’affaires total
  - Nombre de ventes
@@ -64,17 +61,17 @@
  - Produits les plus vendus
  - Taux d’annulation
 
-# ------------------------------------------------------
+
 #  Scalabilité
  - Kafka permet le traitement distribué des flux
  - Elasticsearch supporte de grands volumes de données
  - Docker facilite le déploiement et l’extension du système
 
-# ------------------------------------------------------
+
 #  Visualisation
  Les données sont visualisées dans Kibana à travers des tableaux de bord interactifs pour l’aide à la décision.
 
-# ------------------------------------------------------
+
 # 👩‍💻 Auteur
 # Maram Benkilani
 # Projet académique – Big Data & Business Intelligence
